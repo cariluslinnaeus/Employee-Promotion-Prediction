@@ -1,0 +1,90 @@
+{% extends 'base.html'%}
+{% block content %}
+    
+    <form action="/prediction" method="POST">
+        <div class="div">
+            <label for="Department">Department Name : &nbsp;&nbsp; &nbsp;  </label>
+        
+            <select name="department" id="Department" >
+                <option value=""></option>
+                <option value="8">Sales & Marketing</option>
+                <option value="7">Operations </option>
+                <option value="6">Procurement</option>
+                <option value="5">Technology</option>
+                <option value="4">Analytics</option>
+                <option value="3">Finance  </option>
+                <option value="2">HR </option>
+                <option value="1">Legal</option>
+                <option value="0">R&D</option>
+            </select>
+        
+            <label for="Education">Education  : </label>
+            <select name="education" id="Education" >
+                <option value=""></option>
+                <option value="3">Masters & Above</option>
+                <option value="2">Bachelor's Level</option>
+                <option value="1">Secondary & Below</option>
+                
+            </select>
+        
+        </div>
+<br><br>
+        <div class="div">
+         <label for="Gender">Gender  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+            <select name="gender" id="Gender" >
+                <option value=""></option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+                
+            </select>
+       
+        <label for="Age">Age :  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</label>
+        <input name="age" class="input" id="Age" type="number" min="20" max="60">
+    
+        </div >
+        <br><br>
+        <div class="div">
+            <label for="Score">Training Score : &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;</label>
+            <input name="score" class="input" id="Score" type="number" min="40" max="99">
+        
+            <label for="Service">Experience:</label>
+            <input name="service" class="input" id="Service" type="number" min="0" max="37">
+        
+        </div>
+<br><br>
+        <div class="div">
+            <label for="Training">No. of Training : &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</label>
+            <input name="training" class="input" id="Training" type="number" min="0" max="5">
+       
+            <label for="Awards">Award Won : &nbsp;</label>
+            <input name="Award" id="No" type="radio" value="0" >
+            <label for="No">NO</label>
+            <input name="Award" id="Yes" type="radio" value="1" >
+            <label for="Yes">YES</label>
+        
+        </div>
+
+        <br><br>
+
+        
+
+       
+       <div class="div">
+            <label for="Rating">Previous Year Ratings : </label>
+            <input name="rating" class="input" id="Rating" type="number" min="1" max="5">
+        
+            <label for="">Key Performance Indicator(>80%) &nbsp;: &nbsp;</label>
+            <input name="KPI" id="false" type="radio" value="0" >
+            <label for="false">NO</label>
+            <input name="KPI" id="true" type="radio" value="1" >
+            <label for="true">YES</label>
+        </div>
+            <br><br><br>
+            <input name="clear" class="btn btn-clr" type="button" value="CLEAR">
+
+            <input name="predict" class="btn btn-sub" type="submit" value="PREDICT">
+        
+
+
+    </form>
+{%endblock%}

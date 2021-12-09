@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="alert">
+    
+    {% if result == 1 %}
+    <h1>Should be promoted</h1>
+    
+    {% else %}
+    <h1>No Promotion</h1>
+    {%endif%}
+
+
+</div>
+{%endblock%}
+
